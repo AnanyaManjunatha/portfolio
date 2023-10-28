@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div id ="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer and Database Administrator</p>
+                <h1>Hi, I'm <span>Ananya</span> <br>from India</h1>
+            </div>
+            <div class="about-3">
+                <!-- <img src="ananya-about.jpeg" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-1">
+                    <img src="ananya-header.jpeg" alt="">
+                </div>
+                <div class="about-2">
+                    <h1 class="title">About Me</h1>
+                    <p>Hello, I'm Ananya M‍I'm a  web developer who loves making websites that look great and work well. Strong in design and integration with intuitive problem-solving skills. Proficient in HTML, CSS , JavaScript , Webflow tools , PostgreSQL, MongoDB and SQL    Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. If you want to get in touch or talk about working together, please feel free to contact me.Let's make the web awesome together!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+
+                        
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li><span>UX</span>Designing Website</li>
+                            <li><span>Database Administrator</span>Web Development</li>
+                            <li><span>Web Development</span>Designing Website</li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>2022-2023</span>web developer and Database Administrator</li>
+                           
+
+
+                        </ul>
+                    
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2018-2022</span>Engineering</li>
+                            <li><span>2016-2018</span>PUC</li>
+                            <li><span>2016</span>SSLC</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>ananyamanjunatha4@gmail.com</p>
+                    <p>123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
